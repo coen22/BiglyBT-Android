@@ -1090,7 +1090,7 @@ public class FilesFragment
 		}
 		DownloadManager.Request request = new DownloadManager.Request(
 				Uri.parse(contentURL));
-		request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS,
+		request.setDestinationInExternalPublicDir("/storage/5C09-33D9/NVIDIA_SHIELD/Series",
 				outFile.getName());
 		request.allowScanningByMediaScanner();
 		request.setNotificationVisibility(
@@ -1160,7 +1160,7 @@ public class FilesFragment
 		Uri uri;
 		if (contentURL.startsWith("file://") && context != null) {
 			try {
-				uri = FileProvider.getUriForFile(context, "com.biglybt.files",
+				uri = FileProvider.getUriForFile(context, "com.biglybt.filestest",
 						new File(URLDecoder.decode(contentURL.substring(7), "utf8")));
 			} catch (Throwable e) {
 				// For IllegalArgumentException, see

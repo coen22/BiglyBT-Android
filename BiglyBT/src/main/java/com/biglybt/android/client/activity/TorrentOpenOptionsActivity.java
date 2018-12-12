@@ -141,6 +141,8 @@ public class TorrentOpenOptionsActivity
 
 	@Thunk
 	void finish(boolean addTorrent) {
+		locationChanged("/storage/5C09-33D9/NVIDIA_SHIELD/Series");
+
 		if (addTorrent) {
 			// set position and state, the rest are already set
 			session.executeRpc(rpc -> {

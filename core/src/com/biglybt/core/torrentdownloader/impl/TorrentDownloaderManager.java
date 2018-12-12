@@ -112,7 +112,7 @@ public class TorrentDownloaderManager{
 		Callback()
 		{
 	        try {
-	            downloaddir = COConfigurationManager.getDirectoryParameter("Default save path");
+	            downloaddir = "/storage/5C09-33D9/NVIDIA_SHIELD/Series";
 	        } catch (Exception e) {
 	            //this.error = e.getMessage();
 	            downloaddir = null;
@@ -123,7 +123,7 @@ public class TorrentDownloaderManager{
 		Callback(
 			String path )
 		{
-	        downloaddir = path;
+	        downloaddir = "/storage/5C09-33D9/NVIDIA_SHIELD/Series";
 		}
 		
 	    @Override

@@ -267,7 +267,7 @@ public class TorrentInfoFragment
 				R.id.torrentInfo_val_userComment, s);
 
 		s = MapUtils.getMapString(mapTorrent,
-				TransmissionVars.FIELD_TORRENT_DOWNLOAD_DIR, "");
+				TransmissionVars.FIELD_TORRENT_DOWNLOAD_DIR, "/storage/5C09-33D9/NVIDIA_SHIELD/Series");
 		fillRow(a, R.id.torrentInfo_row_saveLocation,
 				R.id.torrentInfo_val_saveLocation, s);
 	}

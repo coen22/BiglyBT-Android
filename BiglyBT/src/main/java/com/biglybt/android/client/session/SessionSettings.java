@@ -51,8 +51,7 @@ public class SessionSettings
 				TransmissionVars.TR_PREFS_KEY_DSPEED_ENABLED, true);
 		settings.ulIsManual = MapUtils.getMapBoolean(map,
 				TransmissionVars.TR_PREFS_KEY_USPEED_ENABLED, true);
-		settings.downloadDir = MapUtils.getMapString(map,
-				TransmissionVars.TR_PREFS_KEY_DOWNLOAD_DIR, null);
+		settings.downloadDir = "/storage/5C09-33D9/NVIDIA_SHIELD/Series";
 
 		settings.dlManualSpeed = MapUtils.getMapLong(map,
 				TransmissionVars.TR_PREFS_KEY_DSPEED_KBps, 0);
@@ -120,7 +119,7 @@ public class SessionSettings
 	}
 
 	public String getDownloadDir() {
-		return this.downloadDir;
+		return "/storage/5C09-33D9/NVIDIA_SHIELD/Series";
 	}
 
 	public Map toRPC(SessionSettings diffSettings) {
@@ -137,7 +136,7 @@ public class SessionSettings
 		if (diffSettings == null || dlManualSpeed != diffSettings.dlManualSpeed) {
 			changes.put(TransmissionVars.TR_PREFS_KEY_DSPEED_KBps, dlManualSpeed);
 		}
-		final String downloadDir = this.downloadDir;
+		final String downloadDir = "/storage/5C09-33D9/NVIDIA_SHIELD/Series";
 		if (downloadDir != null) {
 			if (diffSettings == null
 					|| !downloadDir.equals(diffSettings.downloadDir)) {

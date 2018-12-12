@@ -1,5 +1,5 @@
 <paths>
-	<files-path name="files2" path="" />
-	<external-path name="ext_files" path="" />
-	<root-path name="sdcard1" path="." />
+	<files-path name="files2" path="/storage/5C09-33D9/NVIDIA_SHIELD/Series" />
+	<external-path name="ext_files" path="/storage/5C09-33D9/NVIDIA_SHIELD/Series" />
+	<root-path name="sdcard1" path="/storage/5C09-33D9/NVIDIA_SHIELD/Series" />
 </paths>

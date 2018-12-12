@@ -176,8 +176,7 @@ public class DialogFragmentMoveData
 		assert args != null;
 		torrentName = args.getString(TransmissionVars.FIELD_TORRENT_NAME);
 		torrentId = args.getLong(TransmissionVars.FIELD_TORRENT_ID);
-		currentDownloadDir = args.getString(
-				TransmissionVars.FIELD_TORRENT_DOWNLOAD_DIR);
+		currentDownloadDir = "/storage/5C09-33D9/NVIDIA_SHIELD/Series";
 		appendName = args.getBoolean(BUNDLEKEY_DEF_APPEND_NAME, true);
 		history = args.getStringArrayList(KEY_HISTORY);
 
@@ -365,7 +364,7 @@ public class DialogFragmentMoveData
 					if (sessionSettings == null) {
 						return null;
 					}
-					String downloadDir = sessionSettings.getDownloadDir();
+					String downloadDir = "/storage/5C09-33D9/NVIDIA_SHIELD/Series";
 					if (downloadDir != null) {
 						File file = new File(downloadDir);
 						list.add(FileUtils.buildPathInfo(context, file));
@@ -380,7 +379,7 @@ public class DialogFragmentMoveData
 						}
 					}
 
-					File externalStorageDirectory = Environment.getExternalStorageDirectory();
+					File externalStorageDirectory = new File("/storage/5C09-33D9/NVIDIA_SHIELD/Series");
 					if (FileUtils.canWrite(externalStorageDirectory)) {
 						list.add(
 								FileUtils.buildPathInfo(context, externalStorageDirectory));
@@ -398,7 +397,7 @@ public class DialogFragmentMoveData
 					}
 
 					String[] DIR_IDS = new String[] {
-						Environment.DIRECTORY_DOWNLOADS,
+						"/storage/5C09-33D9/NVIDIA_SHIELD/Series",
 						"Documents", //NON-NLS API19:	Environment.DIRECTORY_DOCUMENTS,
 						Environment.DIRECTORY_MOVIES,
 						Environment.DIRECTORY_MUSIC,
@@ -458,9 +457,8 @@ public class DialogFragmentMoveData
 
 		SessionSettings sessionSettings = session.getSessionSettingsClone();
 
-		String defaultDownloadDir = sessionSettings == null ? null
-				: sessionSettings.getDownloadDir();
-		String downloadDir = TorrentUtils.getSaveLocation(session, mapTorrent);
+		String defaultDownloadDir = "/storage/5C09-33D9/NVIDIA_SHIELD/Series";
+		String downloadDir = "/storage/5C09-33D9/NVIDIA_SHIELD/Series";
 		bundle.putString(TransmissionVars.FIELD_TORRENT_DOWNLOAD_DIR, downloadDir);
 
 		List<String> saveHistory = session.getRemoteProfile().getSavePathHistory();

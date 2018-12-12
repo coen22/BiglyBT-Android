@@ -2994,6 +2994,6 @@ TagPropertyConstraintHandler
 		TagPropertyConstraintHandler handler = new TagPropertyConstraintHandler();
 
 		//System.out.println( handler.compileConstraint( "!(hasTag(\"bil\") && (hasTag( \"fred\" ))) || hasTag(\"toot\")" ).getString());
-		System.out.println( handler.compileConstraint( "hasTag(  “Seeding Only” ) && seeding_for > h2s(10) || hasTag(\"sdsd\") " ).getString());
+		System.out.println( handler.compileConstraint( "hasTag(  ?Seeding Only? ) && seeding_for > h2s(10) || hasTag(\"sdsd\") " ).getString());
 	}
 }

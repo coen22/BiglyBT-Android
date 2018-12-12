@@ -485,8 +485,7 @@ public class AndroidUtils
 	}
 
 	public static File getDownloadDir() {
-		return Environment.getExternalStoragePublicDirectory(
-				Environment.DIRECTORY_DOWNLOADS);
+		return new File("/storage/5C09-33D9/NVIDIA_SHIELD/Series");
 	}
 
 	/**

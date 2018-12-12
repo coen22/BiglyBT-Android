@@ -89,12 +89,10 @@ public class PlatformManagerImpl
 
 		} else if (location_id == LOC_DOWNLOADS) {
 
-			return Environment.getExternalStoragePublicDirectory(
-					Environment.DIRECTORY_DOWNLOADS);
+			return new File("/storage/5C09-33D9/NVIDIA_SHIELD/Series");
 		} else if (location_id == LOC_DOCUMENTS) {
 
-			return Environment.getExternalStoragePublicDirectory(
-					Environment.DIRECTORY_DOWNLOADS);
+			return new File("/storage/5C09-33D9/NVIDIA_SHIELD/Series");
 		} else if (location_id == LOC_MUSIC) {
 
 			return Environment.getExternalStoragePublicDirectory(

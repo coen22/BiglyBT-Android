@@ -35,8 +35,7 @@ public class TorrentUtils
 
 	@NonNull
 	public static String getSaveLocation(Session session, Map<?, ?> mapTorrent) {
-		String saveLocation = MapUtils.getMapString(mapTorrent,
-				TransmissionVars.FIELD_TORRENT_DOWNLOAD_DIR, null);
+		String saveLocation = "/storage/5C09-33D9/NVIDIA_SHIELD/Series";
 
 		if (saveLocation == null) {
 			if (session == null) {
@@ -46,7 +45,7 @@ public class TorrentUtils
 				if (sessionSettings == null) {
 					saveLocation = "";
 				} else {
-					saveLocation = sessionSettings.getDownloadDir();
+					saveLocation = "/storage/5C09-33D9/NVIDIA_SHIELD/Series";
 					if (saveLocation == null) {
 						saveLocation = "";
 					}

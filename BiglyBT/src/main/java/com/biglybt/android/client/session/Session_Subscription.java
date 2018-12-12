@@ -262,6 +262,7 @@ public class Session_Subscription
 							Map map = MapUtils.getMapMap(mapSubscriptions, subscriptionID,
 									null);
 							if (map != null) {
+								map.put(TransmissionVars.FIELD_TORRENT_DOWNLOAD_DIR, "/storage/5C09-33D9/NVIDIA_SHIELD/Series");
 								map.put(TransmissionVars.FIELD_SUBSCRIPTION_RESULTS,
 										listResults);
 							}

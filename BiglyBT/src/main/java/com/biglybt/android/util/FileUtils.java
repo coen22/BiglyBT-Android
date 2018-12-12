@@ -285,7 +285,7 @@ public class FileUtils
 		}
 
 		if (pathInfo.shortName == null) {
-			String path = Environment.getExternalStorageDirectory().getAbsolutePath();
+			String path = "/storage/5C09-33D9/NVIDIA_SHIELD/Series";
 			if (absolutePath.startsWith(path)) {
 				boolean isRemovable = Environment.isExternalStorageRemovable();
 				pathInfo.shortName = absolutePath.substring(path.length());

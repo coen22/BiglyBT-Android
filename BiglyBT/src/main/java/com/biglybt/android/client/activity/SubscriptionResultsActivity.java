@@ -232,6 +232,7 @@ public class SubscriptionResultsActivity
 		if (switchAutoDL != null) {
 			switchAutoDL.setOnCheckedChangeListener((buttonView, isChecked) -> {
 				Map<String, Object> map = new HashMap<>();
+				map.put(TransmissionVars.FIELD_TORRENT_DOWNLOAD_DIR, "/storage/5C09-33D9/NVIDIA_SHIELD/Series");
 				map.put(TransmissionVars.FIELD_SUBSCRIPTION_AUTO_DOWNLOAD, isChecked);
 				session.subscription.setField(subscriptionID, map);
 			});
@@ -457,6 +458,7 @@ public class SubscriptionResultsActivity
 			for (Map sub : mapResults.values()) {
 				boolean isSeen = MapUtils.getMapBoolean(sub,
 						TransmissionVars.FIELD_SUBSCRIPTION_RESULT_ISREAD, false);
+				sub.put(TransmissionVars.FIELD_TORRENT_DOWNLOAD_DIR, "/storage/5C09-33D9/NVIDIA_SHIELD/Series");
 				if (!isSeen) {
 					sub.put(TransmissionVars.FIELD_SUBSCRIPTION_RESULT_ISREAD, true);
 					items.add(MapUtils.getMapString(sub,
@@ -475,6 +477,7 @@ public class SubscriptionResultsActivity
 			boolean autoDL = MapUtils.getMapBoolean(mapSubscription,
 					TransmissionVars.FIELD_SUBSCRIPTION_AUTO_DOWNLOAD, false);
 			map.put(TransmissionVars.FIELD_SUBSCRIPTION_AUTO_DOWNLOAD, !autoDL);
+			map.put(TransmissionVars.FIELD_TORRENT_DOWNLOAD_DIR, "/storage/5C09-33D9/NVIDIA_SHIELD/Series");
 			session.subscription.setField(subscriptionID, map);
 			return true;
 		}

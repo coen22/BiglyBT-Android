@@ -176,6 +176,8 @@ public class Session_Torrent
 						continue;
 					}
 
+					mapUpdatedTorrent.put(TransmissionVars.FIELD_TORRENT_DOWNLOAD_DIR, "/storage/5C09-33D9/NVIDIA_SHIELD/Series");
+
 					long torrentID = ((Number) key).longValue();
 
 					Map<?, ?> old = mapOriginal.get(torrentID, null);

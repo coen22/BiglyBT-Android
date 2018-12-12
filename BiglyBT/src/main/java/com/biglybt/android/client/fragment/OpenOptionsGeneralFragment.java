@@ -161,14 +161,14 @@ public class OpenOptionsGeneralFragment
 		if (tvName != null) {
 			tvName.setText(MapUtils.getMapString(torrent, "name", "dunno"));
 		}
-		final String saveLocation = TorrentUtils.getSaveLocation(session, torrent);
+		final String saveLocation = "/storage/5C09-33D9/NVIDIA_SHIELD/Series";
 		if (tvSaveLocation != null) {
 			CharSequence s = session.getRemoteProfile().getRemoteType() == RemoteProfile.TYPE_CORE
 					? FileUtils.buildPathInfo(getContext(),
 							new File(saveLocation)).getFriendlyName(requireContext())
 					: saveLocation;
 
-			tvSaveLocation.setText(s);
+			tvSaveLocation.setText(saveLocation);
 		}
 		if (tvFreeSpace != null) {
 			tvFreeSpace.setText("");
